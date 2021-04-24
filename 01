@@ -1,0 +1,273 @@
+  
+CSN Security Network  
+The invention relates to an underlying technology based on COSMOS  
+Cross-chain billing network technology and application white paper 
+  
+Cosmos Technology Description 1. Introduction  
+The combined success of open source ecosystems, decentralized file sharing, and public cryptocurrencies has inspired an understanding of decentralization 
+  
+The blockchain is vulnerable to an attack in which part of the parent's hashing ability does not actively merge mining children. An academic review of the architecture of surrogate blockchain networks is provided to provide more background information, and we provide a summary of other proposals and their drawbacks in the "related work".
+ 
+Here, we introduce the CSN secure network, a novel blockchain network architecture based on the Cosmos architecture, which can be used  
+Solve all these problems. Cosmos is a network of many independent blockchains, called Regions.  These areas are supported by Tendermint BFT, which provides a high-performance, consistent, and secure consensus engine similar to the PBFT, in which strict fork-accountability guarantees the behavior of malicious actors.  The Tendermint BFT consensus algorithm is well suited to extending the proof-of-common blockchain. 
+ 
+  
+It is a proposal for confusion and the idea of diversifying consensus to create money, but there is little detail on how to achieve this. In 2005 Hal Finney introduced the concept of a "reusable proof of work", a system that created a concept for cryptocurrency using B-money ideas and Adam Back's difficult-to-compute Hashcash puzzle, but again did not achieve the ideal of relying on trusted computation as a backend. 
+ 
+Because money is the first application of archive, trading order usually is very important, so diversified currency need to solve the consensus of diversification, this is all the currency the currency of the agreement of the main obstacles, despite the years in creating security of Byzantium Wrong multilateral consensus system carried out extensive research, but described all agreements only solves half the problem. The protocol assumes that all participants in the system are known and generates "if N parties participate, then the system can tolerate as much as
+ 
+  
+Here's the thing: a blockchain with Turing's full programming language built in, allowing anyone to write smart contracts and decentralized applications in which they can provide ownership, transaction format and state transition capabilities. A simple version of Namecoin can be written in two lines of code, and other protocols such as currency and reputation systems can be established in less than 20 years. Smart contracts, password "boxes" that contain value and can only be unlocked if certain conditions are met, can also be built on top of our platform,
+ 
+It's much more powerful than what the Bitcoin script offers, because of the additional features of Turing completeness, value recognition, and blockchain recognition 
+Knowledge and states. 
+In this section, we describe the Tendermint Consensus protocol and the interfaces used to build applications using it. In the classic Byzantine fault-tolerant (BFT) algorithm, each node has the same weight. In Tenderm int, section  
+  
+Full details of the agreement are described here.
+Tendermint's security stems from the fact that it uses the best Byzantine fault tolerance through the Super Majority (> ⅔) voting and locking mechanism. Together, they ensure that:
+ 
+The greater one-third of voting rights must be Byzantine, so that they violate safety, by submitting two or more values. 
+If any set of verifiers successfully violates security, or even attempts to do so, it can be identified by the protocol. This includes both voting on disputed parts and broadcasting incorrect votes.
+Despite strong promises, Tendermint provides excellent performance. In a benchmark of 164 nodes spread across 27 data centers on five continents, the Tendermint Consensus can handle thousands of transactions per second in commodity cloud instances, while 
+ 
+  
+Law provides support. The Tendermint open source project was created in 2014 to address the speed, scalability, and environmental issues of Bitcoin's proof-of-work consensus algorithm.  By using and improving a proven BFT algorithm developed by the Massachusetts Institute of Technology in 1988, the Tendermint team was the first to conceptualize a proof-of-equity cryptocurrency, the 
+ 
+Cryptocurrencies solve the problem of equity abuse suffered by the first generation of certificates.   - Make cryptocurrency transactions such as NXT and BitShares1.0.
+Today, almost all Bitcoin mobile wallets use trusted servers to authenticate their transactions. This is because the proof of work has to wait for many confirmations before a transaction can be treated as an irreversible commitment. in
+ 
+  
+The distributed public ledger should have a constitution and governance system. Bitcoin relies on the Bitcoin Foundation and mining to coordinate the upgrade, but it's a slow process. Ethereum forked into Ethereum and ETC after the TheDAO hack, mainly because there was no prior social contract or mechanism for making such decisions. 
+ 
+Verifiers and delegators on the Cosmos Hub can vote on proposals that can automatically change system preset parameters (for example, gas limits), coordinate upgrades, and vote on amendments to the human-readable constitution that control the organization's policies.  The center of the universe. The Constitution allows stakeholders to unite around issues such as theft and mistakes (like TheDao), which can be solved faster and cleanly. 
+ 
+  
+Hold synchronization (but not indirectly between regions through a hub). Packets are then passed from one region to another by publishing what Merkle has identified as evidence of the message being sent and received.  This mechanism is called Blockchain-to-blockchain communication, or IBC. 
+ 
+Any region itself can be a hub for forming an acyclic graph, but for clarity we will describe only one 
+Simple configuration of one hub and many non-hub areas. 
+  
+Like a currency account, a zone cannot transfer more tokens than it does, but it can receive tokens from others who own tokens. A zone can be designated as a "source" for one or more token types, giving the zone the ability to expand the token 
+The power to supply. 
+Atoms of a Cosmos Hub may be lofted by validators of the region connected to the Hub.  Although a double-cost attack on these areas will cause Tendermint's fork-accountability to reduce atoms, areas with voting rights greater than ⅔ that are Byzantium may submit invalid status.  Cosmos Hub does not validate or execute transactions committed on other regions, so it is the user's responsibility to send tokens to regions they trust. In the future, Cosmos Hub
+ 
+  
+Merkle Proof published.  
+By splitting the IBC mechanism into two separate transactions, we allow the receiving chain's local fee market mechanism to determine submissions  
+(that is, confirm), while having complete freedom on the sending chain to allow as many outbound packets as possible. 
+In the above example, in order to update the block hash of "Zone1" on "Hub" (or 
+"Zone2" IBCBlockCommittx on the "Hub" block hash), must use the "Zone1" block hash to publish the transaction to the "Hub" (or on "Zone2" where the hash value is "Hub").  
+  
+Services. The downside is that both parties have to be online to conduct transactions. 
+Another type of distributed exchange is a massively replicated distributed exchange that runs on its own blockchain. Users who enter such trades can submit limit orders and shut down their computers, and trades can be made while the user is not online 
+Execute under the condition. Blockchain matches and completes transactions on behalf of traders. 
+Centralized trading can create a deep order book of limit orders, attracting more traders. Liquidity on the Exchange 
+  
+To move money in and out of the exchange to other areas. 
+Bridge to other cryptocurrencies 
+Privileged areas can act as a source of bridging tokens for another cryptocurrency. Bridges are similar to the relationship between Cosmos hubs and regions. Both must keep up with the latest block of the other to verify evidence that tokens have been moved from one to the other. A "bridge area" on the Cosmos network is in sync with hubs and other cryptocurrencies. Indirection through bridging regions allows the hub's logic to be kept simple and to be in common with other blockchains' policies (such as Bitcoin's)
+ 
+  
+The set of validators may be the same as the set of validators for the Cosmos Hub.  
+In the case of Bitcoin, the concept is similar, except that each UTXO will be governed by a threshold multi-signed P2SH publication, rather than a single bridge contract.  Due to the limitations of the P2SH system, the signer cannot communicate with  
+The Cosmos Hub validator set is the same.  
+Extract the token from the Cosmos Hub  
+  
+These problems can be solved by designing fully responsible Bridges. For example, all IBC packets coming from both the hub and the originating place may require bridge area validation so that the hub or originating bridge can effectively challenge and validate all state transitions in the bridge area, contract. Hubs and sources should allow the bridge area to validate the program through
+ 
+And the transfer of the tokens from the bridge contract should be delayed (and the unsecured term of the collateral should be long enough) to allow the independent auditor to raise any challenges. We will standardize the design and the implementation of the system as 
+Future Cosmos improvements are suggested to be open for the Cosmos Hub's governance system to pass through.  
+Ethereum Scale 
+  
+Ethereum, ZeroCash, Bitcoin, Cryptonote, etc.) can be used in conjunction with Tendermint BFT, which is a high performance consensus engine that can be used over a common network, opening up huge opportunities for cross-platform interoperability. Furthermore, as a multi-asset blockchain, a single transaction may contain multiple inputs and outputs, each of which can be of any token type, allowing Cosmos to be directly used as a platform for decentralized transactions, albeit fake 
+ 
+Orders are matched through other platforms. Optionally, the zone can be used as a distributed fault-tolerant exchange (with an order book), which could be a strict improvement on the existing centralized cryptocurrency exchange, which has centralized cryptography 
+Currency exchanges can be invaded over time. 
+Zones can also be used as versions of the blockchain supported by corporate and government systems, which are traditionally held by an organization or a group of groups 
+  
+Joint name resolution system 
+Namecoin was one of the first blockchains to attempt to solve the problem of name resolution by adapting the Bitcoin blockchain. Unfortunately, there are some problems with this approach. 
+For example, with Namecoin, we can verify that @satoshi has been registered on a particular public key in the past, but only if we downloaded the latest update since that name.  This is due to the limitations of Bitcoin's UTXO transaction Merkle model, in which only transactions (and not mutable application state) are Merkle into block hashes. This allows us to prove the existence of the name, but not to prove the non-existence of the name later on
+ 
+  
+Issuance and Incentive 
+Atomic token 
+Although Cosmos Hub is a multi-asset distributed ledger, there is a special native token called CSN.  Atoms are the only collateral markers of the Cosmos Hub. Atoms are licenses that the holder can vote on, authenticate, or delegate to other verifiers. Like Ethereum's Ethereum coins, atoms can also be used to pay transaction fees to reduce the volume of junk mail. Additional inflation atoms and bulk transaction fees will be awarded to the verifier authorized to the verifier
+ 
+  
+On creation day, the maximum number of verifiers will be set to 100, and this number will grow by 13% for 10 years, eventually reaching 300 verifiers.  
+Year 0: 100 Year 1: 113 
+Year 2: 127 Year 3: 144 Year 4: 163 Year 5: 184
+ 
+  
+The verifier's fine 
+If you intentionally or unintentionally deviate from the approved protocol, you must impose certain penalties on the certifier. Certain evidence is immediately admissible, such as a double mark at the same height and circle, or a violation of "pre-lock" (Tendermint Consensus) 
+The rules of discussion). Such evidence will result in the verifier losing good standing and having its bonded atoms and share of tokens in the reserve pool (collectively referred to as "equity") reduced. 
+Sometimes, due to LAN outages, power failures, or other reasons, the validator will not be available. If validatorTimeOutWindow has been validated at any time in the past, the validator's submission vote is not  
+  
+The validator is automatically suspended for a specific period of time (default is 1 week).  
+The principal automatically inherits the vote of the proxy verifier. The vote could be overruled manually. The unbonded atom has no claim. 
+Each proposal needs to store a MinumProposalDeposit token, which can be a combination of one or more tokens, including atoms. For each proposal, voters can vote on whether a deposit is required. If more than half of the voters choose to accept the bond (for example, because the proposal is spam), the bond will go in
+ 
+The reserve pool, except for the atoms that are burned. 
+  
+ParameterChangeProposal can be changed by any parameters defined here.  
+The bounty proposal 
+The expansion of the atom can make the atom expand and cost the BountyProposal.  
+Written proposal 
+All other proposals, such as the proposal to upgrade the protocol, will be coordinated through common TextProposal.  
+  
+Court Fault Tolerant (PBFT) is introduced as an efficient partial synchronization consensus algorithm, which can tolerate 1/3 of arbitrary behavior. The PBFT became the standard algorithm, resulting in many variants, including one recently created by IBM as part of its contribution to Hyperledger. 
+ 
+The main benefit of Tendermint Consensus over PBFT is that Tendermint has an improved and simplified underlying structure, some of which is the result of adopting the blockchain paradigm.  The Tendermint blocks must be committed in order to avoid the complexity and communication overhead associated with view changes to the PBFT.  In cosmic and many cryptocurrencies, it is not necessary to allow block N + I, where I> = 1 is submitted when block N itself has not yet been submitted.  If the bandwidth is block N not 
+ 
+  
+The stakeholder selects "witnesses" who witness and submit transactions, and "representatives" who coordinate software updates and parameter changes.    BitShares2.0 aims to achieve high performance under ideal conditions (100K Tx/s with latency of 1s), where each block is signed by a single signer, and the transaction completes in a much longer time than the block interval. The specification is still under development. interests
+ 
+The gatekeepers can remove or replace misbehaving witnesses on a daily basis, but there is no substantial collateral for witnesses or representatives, as is the case 
+Like Tendermint POS, it will be reduced in the event of a successful double flower attack.  
+star 
+  
+Therefore, Tendermint-based Proof of Interest has the advantage of being relatively simple while still providing adequate and provable security guarantees.  
+The currency NG  
+Bitcoinng is a proposed improvement to Bitcoin that would allow for forms of vertical scaling, such as increasing block size, without the negative economic consequences normally associated with such a change, such as the huge impact on small miners. This improvement is achieved by separating the leader election from the transaction broadcast: the leader is first elected in the "microblock" by proof of work, and is then able to broadcast the transaction to be submitted until a new microblock is found. This reduces winning PoW 
+ 
+  
+Temporary interoperability is provided between different ledger systems. Like the Lightning Network, ILP's purpose is to facilitate payments, but it specializes in payments for different ledger types and extends the atomic transaction mechanism to include not only hash locks, but also a legal notary number (called atomic transfers).Agreement). The latter enforces atoms in interledger transactions
+ 
+The sex mechanism is similar to Tendermint's light client SPV mechanism, so there is a need in ILP and Cosmos /  
+Distinguish between IBC.  
+  
+  
+A side chain is a mechanism for expanding the Bitcoin network via an alternative blockchain that "pins both ways" to the Bitcoin blockchain. (Double hook is equivalent to a bridge. In Cosmos, we say "bridging" to distinguish it from market linking). The side chain allows Bitcoin to effectively move from the bitcoin blockchain to the side chain and back, and allows experimentation with new features of the side chain.
+ 
+As in Cosmos Hub, the side chain and Bitcoin act as light clients to each other, using the SPV proof to determine when coins should be transferred to the side chain and returned.  Of course, since Bitcoin uses proof of work, the Bitcoin-centric side chain suffers from many problems and risks of proof of work as a consensus mechanism. Furthermore, this is a Bitcoin-maximizing solution, unlike Cosmos, which itself supports multiple tokens and interarea network topologies. That is to say,
+ 
+  
+  
+  
+  
+Horizontal scaling through multiple parallel blockchains, while regular, more frequent block commits also allow vertical scaling. 
+  
+The appendix 
+Fork accountability 
+Well-designed consensus agreements should provide some assurance in the event that tolerance is exceeded and the consensus fails. This was especially necessary in economic systems where Byzantine actions could bring considerable economic rewards. The most important guarantee is a form of derivative liability, in which the process leading to the failure of the consensus (that is, causing the client of the protocol to accept different values - derived) can be identified and punished according to the rules of the protocol, or possibly the legal regime. When the legal system is not enforced reliably
+ 
+  
+And the value of TimeoutPropose increases with each round. The next round of progress is completely asynchronous, because progress is not completed until the verifier hears it from the network's >⅔. In practice, it would take a strong opponent to defeat the weak synchronization hypothesis indefinitely (resulting in the consensus not being able to commit blocks), and this might be made more difficult by using the random value of TimeoutPropose on each validator. 
+ 
+An additional set of constraints or locking rules ensures that the network ends up committing only one block per height. Any malicious attempt to commit more than one block at a given height can be identified. First, the PRECOMMIT for a block must be with a reason, in the form of a Polka for that block.  If the verifier has pre-committed a block on turn R 1, we say that they have _lock on that block and are used to prove the dot of the new round at R_2 
+ 
+  
+Assuming that the broadcast network has a sufficiently elastic set and has a static validation assembly, any branch in the blockchain can be detected and the deposit of the problematic validators reduced. The innovation, first proposed by Vitalik Buterin in early 2014, solves the unsecured problem of other proof-of-stake digital currencies. 
+ 
+However, since the validator set must be able to change, the original validators may be completely unbound for a long time, and therefore free to create new chains from the creation block without paying anything, since they no longer need to lock in deposits up. In contrast to a short-range attack, which is called a remote attack (LRA), the verifier of the current binding causes a fork and therefore should be penalized (assuming the forking is responsible)
+ 
+  
+The above approach to preventing LRA is well suited to Tendermint-driven blockchain validators and intact nodes for which the network will remain connected. The method is also suitable for light customers who can expect frequent synchronization with the network 
+End. However, for lightweight clients that do not expect frequent access to the Internet or the blockchain network, another can be used  
+A solution to overcome LRA. Non-verifier token holders can post their tokens as collateral for very long unbinding periods (for example, longer than the verifier's unbinding period) and provide lightweight clients with an auxiliary means of proving the validity of current and past block hashes. Although these tokens are not included in the blockchain consensus's security, they can still provide a strong guarantee for light customers. If Ethereum supports historical block hash queries, then any
+ 
+  
+For these types of attacks, a subset of verifiers should be coordinated by external means to sign a recombination proposal for the choice fork (and any evidence of it), as well as an initial subset of verifiers with the verifier signature. The verifier who signs such a reconstitution will relinquish all other forked collateral. The Client shall verify the signature on the Reorganization Proposal and verify the agreement
+ 
+What evidence to make a judgment or prompt the end user to make a decision. For example, a phone-wallet application might issue a security warning to the user, and a refrigerator could accept any reorganization proposal signed by a +1/2 original verifier with the right to vote. 
+No asynchronous Byzantine fault-tolerant algorithm fails to reach consensus when ≥1/3 of the voting power is dishonest, but Fork assumes that ≥1/3 of the voting power has been changed by dishonest double-signing or locking.Therefore, sign the restructuring proposal 
+  
+And other organizations to build a community consensus on what manual actions participants need to take to heal the network. In addition, since the Tendermint blockchain verifier can be expected to be identifiable, the promise of an invalid state may even be penalized by law or certain external precedents if needed. 
+ 
+ABCI specification  
+ABCI contains three main message types that are delivered from the core to the application. The application is rung accordingly 
+Reply to messages. 
+The AppendTX message is the backbone of the application.  Every transaction in the blockchain carries this message. The application order requires encrypted credentials for the current state, application protocol, and transaction to authenticate via the AppendTX message  
+  
+The ABCI request/response is a simple ProtoBuf message. Check out the schema file. 
+The appendix 
+  
+  
+Verify the transaction. This message should not change state. Transactions are first run through ChecktX and then broadcast to peers in the memory pool layer.  You can make ChecktX half-state and clear the state beginBlock on COMMIT or to allow related transactions to take place in the same block.  
+crime 
+  
+  
+  
+information 
+  
+  
+Returns information about the state of the application. Application-specific. 
+Setting options 
+  
+  
+BeginBlock 
+  
+  
+Indicates the start of a new block. Called before any AppendTx.  
+  
+MaxHeight packet field), while any target chain may be subject to a denial of service attack, passing in the number  
+There was a sudden surge in the number of packets. 
+In these cases, the sender can ask for delivery confirmation ACKPending by setting the initial packet state to.  It is then the responsibility of the receiving chain to include the indentation in the application's Merkle hash through the IBCPacket  
+Write to confirm delivery. 
+  
+Next, post an IBCBlockCommit and IBCPackettX on "Zone2" to prove that it exists  
+IBCPacket "Hub". IBCPacketTx has the following values:  
+  
+  
+  
+  
+  
+Meanwhile, unless evidence to the contrary is found on Hub, Zone1 may optimistically assume that the Coin package has been successfully delivered. In the above example, if AckSent in box 350 "Hub" has not been received from "Zone2"  
+State, it automatically sets the state to Timeout. Evidence of timeouts can be posted back to "Zone1", and 
+Any token can be returned. 
+  
+  
+  
+  
+  
+  
+A SimpleTree with 7 elements 
+  
+The order.
+When binary variants are available, we will support other efficient Merkle trees, such as Ethereum's Patricia Trie.  
+Transaction type 
+In the implementation of the specification, transactions are transferred to a Cosmos hub application through an ABCI interface stream.  
+The Center for the Universe will accept some major types of transactions, including SendtX, BondtX, UnbondtX, 
+A proposalCreateTX, a proposalVoteTX, a proposalCreateTX, a proposalVoteTX, and a proposalVoteTX, which are fairly self-evident and will be documented in a future version of this article. Here, we document two types of IBC 
+ 
+  
+To prove ValidatorsHash against BlockHash  
+  
+Ming AppHash BlockHash  
+IBCPacketTx 
+Anibcpacket consists of the following:  
+  
+An IBCPackettx transaction consists of the following:  
+  
+  
+Chain highly 
+  
+  
+CSN Secure Network Applications  
+1. An overview of the 
+CSN security network is a new application based on COSMOS technology.  From the above COSMOS technical documentation can be clear  
+As we know, COSMOS technology has a good cross-chain transaction characteristics, this characteristic for the realization of block chain network unity, consistency, convenience points out the direction. 
+Baby Ex Fund is the first financial company in Singapore and the first in the world to engage in virtual currency asset management.  Baby Ex Fund provides investors with a series of professional virtual currency asset allocation, management, asset appreciation, capital operation and so on  
+  
+Assets, such as proof-of-work mechanisms (PoW), anchor computing power.
+Transaction performance is the number of transactions per second (TPS).The main reason for the poor performance of blockchain is that each transaction has to be agreed on at all nodes.
+ 
+Major blockchains Bitcoin, Ethereum, and EOS have all compromised one feature of the Impossible Triangle. 
+As a decentralized digital currency, Bitcoin sacrifices performance characteristics to meet the design requirements of decentralization and security. The cost of attacking Bitcoin is currently the highest of all the public POW chains.  With the upgrading of ASIC mining machines and the continuous addition of new mining machines, the computing power of the whole network can be improved continuously. 
+Ethereum 2.0 will adopt a proof-of-stake (POS) consensus mechanism. On the eTaifang network, you can not only transfer money but also
+ 
+  
+If the transaction failed to be successfully queryedon other mainnet, then extend a query cycle, after 2 cycles is still less than half of the success record, then declare the transaction failed, trade rollback, delete the transaction.
+3) Each accounting node can only queue up to process 3 records to be confirmed at the same time. When the queue of nodes with higher accounting authority is full, the remaining nodes with higher accounting authority will give priority to record and verify.
+ 
+4) If a node initiates several transactions continuously and fails to be recorded successfully, it is determined to be a lying node and restricted 
+Its authority to initiate transactions or records. 
+The asynchronous recording mode of CSN security network can be determined as a successful transaction at the moment the transaction is initiated, and can be determined as a successful transaction  
+  
+In order to maximize the decentralization of CSN security network, Baby Ex works on the construction of open security network for the public.    With the current volume of Baby Ex Fund's own business, 100,000 basic nodes are needed to ensure the complete decentralization of CSN's safety network. With the increase in the number of basic nodes, Baby Ex Fund will gradually move from the traditional way of trading to the CSN security network based trading network, until all business is fully transferred to the network.
+ 
+In the next step, Baby Ex Fund will open the CSN secure network platform to allow other financial companies or fund companies to use the CSN secure network for virtual currency transactions.If all goes well, the CSN security network will become universal 
+The world's first non-matching cross-chain trading platform. 
+ 
